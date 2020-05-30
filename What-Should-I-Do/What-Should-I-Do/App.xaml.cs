@@ -4,10 +4,12 @@ using System.IO;
 using What_Should_I_Do.Database;
 using What_Should_I_Do.Models;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using What_Should_I_Do.Views;
 
 namespace What_Should_I_Do
 {
-    public partial class App
+    public partial class App : Application
     {
         public static ReminderDatabase Database { get; private set; }
 
@@ -25,6 +27,20 @@ namespace What_Should_I_Do
 
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage());
+            MainPage = new AppShell();
+        }
+
+        protected override void OnStart()
+        {
+           // Handle when your app starts
+        }
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
         }
     }
 }
