@@ -20,8 +20,7 @@ namespace What_Should_I_Do.ViewModels
 
         private async void HandleAdd()
         {
-            var nav = (NavigationPage)Application.Current.MainPage;
-            await nav.PushAsync(new AddItemPage());
+            await Shell.Current.GoToAsync("additem");
         }
 
         private async void HandleDelete(Reminder reminder)

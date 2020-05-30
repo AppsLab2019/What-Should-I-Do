@@ -22,13 +22,19 @@ namespace What_Should_I_Do.ViewModels
 
         private async void HandleAdd()
         {
-            await App.Database.SaveNoteAsync(Reminder);
+            try
+            {
+                await App.Database.SaveNoteAsync(Reminder);
 
-            // store replacement
-            App.Reminders.Add(Reminder);
+                // store replacement
+                App.Reminders.Add(Reminder);
 
-            var nav = (NavigationPage) Application.Current.MainPage;
-            await nav.PopAsync();
+                await Shell.Current.Navigation.PopAsync();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }

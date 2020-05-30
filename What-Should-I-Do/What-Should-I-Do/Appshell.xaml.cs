@@ -1,10 +1,12 @@
-﻿namespace What_Should_I_Do
+﻿using Xamarin.Forms;
+
+namespace What_Should_I_Do
 {
-    public partial class AppShell
+public partial class AppShell : Shell
+{
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
+}
 }

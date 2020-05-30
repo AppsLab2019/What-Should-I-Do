@@ -4,8 +4,6 @@ using System.IO;
 using What_Should_I_Do.Database;
 using What_Should_I_Do.Models;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using What_Should_I_Do.Views;
 
 namespace What_Should_I_Do
 {
@@ -26,8 +24,14 @@ namespace What_Should_I_Do
             Reminders = new ObservableCollection<Reminder>(loadedReminders);
 
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+            RegisterRoutes();
             MainPage = new AppShell();
+        }
+
+        private void RegisterRoutes()
+        {
+            Routing.RegisterRoute("home", typeof(MainPage));
+            Routing.RegisterRoute("additem", typeof(AddItemPage));
         }
 
         protected override void OnStart()

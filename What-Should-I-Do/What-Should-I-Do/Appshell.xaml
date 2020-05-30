@@ -1,20 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms"
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:v="clr-namespace:What_Should_I_Do.Views"
-       x:Class="What_Should_I_Do.AppShell"
-       Style="{StaticResource Style.MainShell}">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="What_Should_I_Do.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:What_Should_I_Do;assembly=What-Should-I-Do"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
 
-    <FlyoutItem Title="Home">
-        <ShellContent ContentTemplate="{DataTemplate v:MainView}"/>
-    </FlyoutItem> 
-
-    <FlyoutItem Title="Settings">
-        <ShellContent ContentTemplate="{DataTemplate v:SettingsView}"/>
-    </FlyoutItem>
-
-    <FlyoutItem Title="Help">
-        <ShellContent ContentTemplate="{DataTemplate v:HelpView}"/>
+    <FlyoutItem Title="What Should I Do" FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Home">
+            <ShellContent Route="home">
+                <local:MainPage />
+            </ShellContent>
+        </Tab>
     </FlyoutItem>
 
 </Shell>
