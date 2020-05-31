@@ -35,10 +35,11 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="m:Reminder">
                         <StackLayout Padding="6">
-                            <Frame HasShadow="True"
-                                   CornerRadius="10"
+                            <Frame HasShadow="True"                                   
+                                   CornerRadius="20"
                                    BorderColor="#ff7700"                                   
                                    BackgroundColor="Black">
+
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={x:Reference Root}, Path=BindingContext.DeleteCommand}"
                                                           CommandParameter="{Binding}"
