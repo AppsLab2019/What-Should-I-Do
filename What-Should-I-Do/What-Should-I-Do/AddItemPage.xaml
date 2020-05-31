@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:What_Should_I_Do.ViewModels"
              mc:Ignorable="d"
-             x:Class="What_Should_I_Do.AddItemPage">
+             x:Class="What_Should_I_Do.AddItemPage"
+             BackgroundColor="Black">
 
     <ContentPage.BindingContext>
         <vm:AddItemViewModel/>
@@ -16,7 +17,7 @@
                HorizontalOptions="Center"
                Margin="0, 0, 56, 0"
                FontAttributes="Bold"
-               TextColor="White"
+               TextColor="Black"
                FontSize="25"/>
     </NavigationPage.TitleView>
 
@@ -39,47 +40,64 @@
         <Label Grid.Row="0"
                Text="Meno:"
                FontSize="20"
-               VerticalOptions="Center"/>
+               VerticalOptions="Center"
+               TextColor="Orange"/>
 
         <Entry Grid.Row="0"
                Grid.Column="1"
                Grid.ColumnSpan="2"
-               Text="{Binding Reminder.Name}"/>
+               Text="{Binding Reminder.Name}"
+               TextColor="#ff7700"
+               Placeholder="*******"
+               PlaceholderColor="#ffa047"/>
 
         <Label Grid.Row="2"
                Grid.Column="0"
                Grid.ColumnSpan="2"
                Text="Priority:"
                FontSize="20"
-               VerticalOptions="Center"/>
+               VerticalOptions="Center"
+               TextColor="Orange"/>
 
         <Slider Grid.Row="2"
                 Grid.Column="1"
                 Maximum="9"
                 ValueChanged="OnPriorityChanged"
-                Value="{Binding Reminder.Priority}"/>
+                Value="{Binding Reminder.Priority}"
+                ThumbColor="#ff7700"
+                MinimumTrackColor="#ff7700"
+                MaximumTrackColor="Orange"/>
 
         <Label Grid.Row="2"
                Grid.Column="2"
                x:Name="PriorityValueLabel"
-               Text="{Binding Reminder.Priority, Mode=OneTime}"/>
+               Text="{Binding Reminder.Priority, Mode=OneTime}"
+               TextColor="#ff7700"/>
 
         <Label Grid.Row="3"
                Grid.Column="0"
                Text="Date:"
                FontSize="20"
-               VerticalOptions="Center"/>
+               VerticalOptions="Center"
+               TextColor="Orange"/>
 
         <DatePicker Grid.Row="3"
                     Grid.Column="1"
                     Format="D"
-                    Date="{Binding Reminder.Date}"/>
+                    Date="{Binding Reminder.Date}"
+                    TextColor="Orange"/>
 
         <Button Grid.Row="4"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Text="Add"
-                Command="{Binding AddCommand}"/>
-                
+                Command="{Binding AddCommand}"
+                BackgroundColor="Black"
+                TextColor="#ff7700"
+                BorderColor="#ff7700"
+                BorderWidth="2"
+                CornerRadius="30"
+                Margin="30"/>
+
     </Grid>
 </ContentPage>

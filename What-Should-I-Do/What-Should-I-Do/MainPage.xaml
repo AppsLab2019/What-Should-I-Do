@@ -8,7 +8,7 @@
              xmlns:local="clr-namespace:What_Should_I_Do"
              mc:Ignorable="d"
              x:Class="What_Should_I_Do.MainPage"
-             BackgroundColor="#F0F0F0"
+             BackgroundColor="Black"
              x:Name="Root">
 
     <ContentPage.BindingContext>
@@ -19,7 +19,7 @@
         <Label Text="What should I do "
                HorizontalOptions="Center"
                FontAttributes="Bold"
-               TextColor="White"
+               TextColor="Black"
                FontSize="25"/>
     </NavigationPage.TitleView>
 
@@ -80,8 +80,8 @@
                 AbsoluteLayout.LayoutBounds = " 0.95,0.95,60,60 " 
                 AbsoluteLayout.LayoutFlags = " PositionProportional "
                 CornerRadius="30"
-                BackgroundColor="#2196F3"
-                ImageSource="icon_add.png"
+                BackgroundColor="orange"
+                ImageSource="icon_plus.png"
                 Command="{Binding AddCommand}"/>
         </AbsoluteLayout>
     </ContentPage.Content>
