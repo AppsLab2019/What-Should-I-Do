@@ -37,7 +37,7 @@
                         <StackLayout Padding="6">
                             <Frame HasShadow="True"
                                    CornerRadius="10"
-                                   BorderColor="Orange"                                   
+                                   BorderColor="#ff7700"                                   
                                    BackgroundColor="Black">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={x:Reference Root}, Path=BindingContext.DeleteCommand}"
@@ -51,14 +51,14 @@
                                        FontAttributes="Bold"/>
 
                                     <BoxView HeightRequest="2"
-                                         BackgroundColor="Orange"/>
+                                         BackgroundColor="#ff7700"/>
 
                                     <Label FontSize="14">
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <Span Text="Priority: "
                                                       TextColor="Orange"/>
-                                                <Span Text="{Binding Priority}"/>
+                                                <Span Text="{Binding Priority}" TextColor="Orange"/>
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
@@ -68,7 +68,7 @@
                                             <FormattedString>
                                                 <Span Text="Date: "
                                                       TextColor="Orange"/>
-                                                <Span Text="{Binding Date, StringFormat='{0:dd.MM.yyyy}'}"/>
+                                                <Span Text="{Binding Date, StringFormat='{0:dd.MM.yyyy}'}" TextColor="Orange"/>
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
