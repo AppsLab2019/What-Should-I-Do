@@ -37,8 +37,8 @@
                         <StackLayout Padding="6">
                             <Frame HasShadow="True"
                                    CornerRadius="10"
-                                   BorderColor="Black"
-                                   BackgroundColor="{x:Static local:ReminderColor.RandomColor}">
+                                   BorderColor="Orange"                                   
+                                   BackgroundColor="Black">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={x:Reference Root}, Path=BindingContext.DeleteCommand}"
                                                           CommandParameter="{Binding}"
@@ -47,15 +47,17 @@
                                 <StackLayout>
                                     <Label FontSize="20"
                                        Text="{Binding Name}"
+                                           TextColor="Orange"
                                        FontAttributes="Bold"/>
 
                                     <BoxView HeightRequest="2"
-                                         BackgroundColor="LightGray"/>
+                                         BackgroundColor="Orange"/>
 
                                     <Label FontSize="14">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="Priority: "/>
+                                                <Span Text="Priority: "
+                                                      TextColor="Orange"/>
                                                 <Span Text="{Binding Priority}"/>
                                             </FormattedString>
                                         </Label.FormattedText>
@@ -64,7 +66,8 @@
                                     <Label FontSize="14">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="Date: "/>
+                                                <Span Text="Date: "
+                                                      TextColor="Orange"/>
                                                 <Span Text="{Binding Date, StringFormat='{0:dd.MM.yyyy}'}"/>
                                             </FormattedString>
                                         </Label.FormattedText>
