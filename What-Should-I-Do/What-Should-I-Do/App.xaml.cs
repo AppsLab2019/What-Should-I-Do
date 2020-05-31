@@ -24,14 +24,7 @@ namespace What_Should_I_Do
             Reminders = new ObservableCollection<Reminder>(loadedReminders);
 
             InitializeComponent();
-            RegisterRoutes();
-            MainPage = new AppShell();
-        }
-
-        private void RegisterRoutes()
-        {
-            Routing.RegisterRoute("home", typeof(MainPage));
-            Routing.RegisterRoute("additem", typeof(AddItemPage));
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
